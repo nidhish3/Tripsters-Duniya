@@ -50,7 +50,8 @@
 	    	<div class="header-content text-md-center wow animate fadeInUp">
 	      		<h2>Tripsters Duniya</h2>
 	      		<p>Wherever you go it'll inside the world</p>
-	      		<a class="btn btn-link-1 scroll" href="#trending-holiday">Explore Now</a>
+				  <a class="btn btn-link-1 scroll" href="#trending-holiday">Explore Now</a>
+				<p id="ct"></p>
 	    	</div>	
 	    </div>
 	</header>
@@ -836,6 +837,18 @@
 	          deepSearch: false,
 	      });
 	  });
+	</script>
+	<script>
+		 var myDate = new Date(); 
+         var myDay = myDate.getDay();
+		 var hours = myDate.getHours(); 
+        var ampm = hours >= 12 ? 'PM' : 'AM'; 
+        hours = hours % 12; 
+        hours = hours ? hours : 12; 
+        var minutes = myDate.getMinutes(); 
+        minutes = minutes < 10 ? '0' + minutes : minutes; 
+        var myTime = hours +" : " + minutes + " " + ampm ;
+		document.getElementById("ct").innerHTML = myTime;
 	</script>
 </body>
 </html>
